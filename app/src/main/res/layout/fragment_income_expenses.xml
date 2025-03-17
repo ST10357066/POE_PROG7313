@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Feature2AdvancedReportingandAnalytics.IncomeExpensesFragment">
+
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/layoutIncomeExpenses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <!-- Filter / Date Range Selector -->
+        <LinearLayout
+            android:id="@+id/layoutIncomeExpenseFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp">
+
+            <EditText
+                android:id="@+id/editIncomeExpenseDateRange"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Select Date Range"
+                android:inputType="date"/>
+
+            <Button
+                android:id="@+id/buttonApplyIncomeExpenseFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apply"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Bar Graph for Income vs. Expenses -->
+        <FrameLayout
+            android:id="@+id/barGraphContainer"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="16dp">
+            <!-- Insert BarGraph view (e.g., MPAndroidChart BarChart) -->
+        </FrameLayout>
+
+        <!-- Savings Rate Indicator -->
+        <LinearLayout
+            android:id="@+id/layoutSavingsRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:background="@color/lightGray"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/textSavingsRateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Savings Rate:"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/textSavingsRateValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20%"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Download Report Button -->
+        <Button
+            android:id="@+id/buttonDownloadReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Download Report as PDF"/>
+    </LinearLayout>
+
+</FrameLayout>

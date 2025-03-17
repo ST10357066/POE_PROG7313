@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Feature3EducationandSupport.HelpSupportFragment">
+
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollHelpSupport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- FAQ Header -->
+            <TextView
+                android:id="@+id/textFAQHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frequently Asked Questions"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"/>
+
+            <!-- Expandable FAQ List -->
+            <!-- Using ExpandableListView for FAQs -->
+            <ExpandableListView
+                android:id="@+id/expandableFAQ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dividerHeight="8dp"/>
+
+            <!-- Live Chat Section -->
+            <Button
+                android:id="@+id/buttonLiveChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Live Chat with Support"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Contact Form Header -->
+            <TextView
+                android:id="@+id/textContactFormHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit an Issue or Request"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:paddingBottom="8dp"/>
+
+            <!-- Contact Form -->
+            <EditText
+                android:id="@+id/editSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Subject"
+                android:padding="8dp"
+                android:background="@drawable/edit_text_bg"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/editMessage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:hint="Describe your issue or request..."
+                android:padding="8dp"
+                android:background="@drawable/edit_text_bg"
+                android:gravity="top"
+                android:layout_marginBottom="8dp"
+                android:inputType="textMultiLine"/>
+
+            <Button
+                android:id="@+id/buttonSubmitContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

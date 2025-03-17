@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Feature2AdvancedReportingandAnalytics.ReportDashboardFragment">
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <!-- Top Filter Panel -->
+        <LinearLayout
+            android:id="@+id/layoutFilters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <EditText
+                android:id="@+id/editDateRange"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Select Date Range"
+                android:inputType="date"/>
+            <ImageButton
+                android:id="@+id/buttonApplyFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_filter_list"
+                android:contentDescription="Apply Filters"/>
+        </LinearLayout>
+
+        <!-- Tab Layout for Different Reports -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabReports"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutFilters"
+            app:tabMode="fixed"
+            app:tabGravity="fill">
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabSpending"
+                android:text="Spending Trends"/>
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabCategory"
+                android:text="Category Analysis"/>
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabIncome"
+                android:text="Income vs Expenses"/>
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabAgeOfMoney"
+                android:text="Age of Money"/>
+        </com.google.android.material.tabs.TabLayout>
+
+        <!-- Report Display Area -->
+        <FrameLayout
+            android:id="@+id/reportContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tabReports"
+            android:layout_above="@+id/bottomNavigation"/>
+
+        <!-- Bottom Navigation Bar (if needed) -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationReports"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/bottom_nav_menu_reports"/>
+    </RelativeLayout>
+
+
+</FrameLayout>

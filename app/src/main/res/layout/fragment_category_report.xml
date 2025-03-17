@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Feature2AdvancedReportingandAnalytics.CategoryReportFragment">
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/layoutCategoryReport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="16dp">
+
+        <!-- Header / Filter Bar -->
+        <LinearLayout
+            android:id="@+id/layoutFilterBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp">
+
+            <EditText
+                android:id="@+id/editReportDateRange"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Select Date Range"
+                android:inputType="date"/>
+
+            <Button
+                android:id="@+id/buttonCompare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Compare"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Spending Trend Line Chart -->
+        <FrameLayout
+            android:id="@+id/chartContainer"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="16dp">
+            <!-- Replace with a LineChart view (e.g., MPAndroidChart) -->
+        </FrameLayout>
+
+        <!-- Transaction List Header -->
+        <TextView
+            android:id="@+id/textTransactionHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transactions"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- RecyclerView for Transactions -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTransactionsReport"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+</FrameLayout>
