@@ -1,4 +1,8 @@
-package vcmsa.projects.prog7313_poe.DataClass
+package vcmsa.projects.poe_prog7313.dataClasses
+
+import android.icu.math.BigDecimal
+import java.time.LocalDate
+import java.time.LocalDateTime
 
 data class Expense(
     val expenseId: Int,               // Primary Key, auto-increment
