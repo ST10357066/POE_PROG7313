@@ -3,12 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E8F5E9"
+    android:id="@+id/layoutCategoryDetail"
     tools:context=".Feature1BudgetingandGoalTracking.CategoryDetailBudgetFragment">
 
-    <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/layoutCategoryDetail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
