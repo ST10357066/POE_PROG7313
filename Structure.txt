@@ -1,0 +1,63 @@
+POE_PROG7313
+│── .gradle/
+│── .idea/
+│── app/
+│   ├── src/
+│   │   ├── androidTest/java/vcmsa/projects/poe_prog7313/
+│   │   ├── main/
+│   │   │   ├── java/vcmsa/projects/poe_prog7313/
+│   │   │   │   ├── adapters/
+│   │   │   │   ├── auth/
+│   │   │   │   ├── category/
+│   │   │   │   ├── dataClasses/
+│   │   │   │   ├── expense/
+│   │   │   │   ├── Feature1BudgetingandGoalTracking/
+│   │   │   │   ├── Feature2AdvancedReportingandAnalytics/
+│   │   │   │   ├── Feature3EducationandSupport/
+│   │   │   │   ├── CategoriesFragment.kt
+│   │   │   │   ├── ExpensesFragment.kt
+│   │   │   │   ├── LandingFragment.kt
+│   │   │   │   ├── MainActivity.kt
+│   │   │   │   ├── SettingsFragment.kt
+│   │   │   ├── res/
+│   │   │   │   ├── drawable/
+│   │   │   │   ├── layout/
+│   │   │   │   │   ├── activity_auth_login.xml
+│   │   │   │   │   ├── activity_auth_registration.xml
+│   │   │   │   │   ├── activity_main.xml
+│   │   │   │   │   ├── fragment_auth_profile.xml
+│   │   │   │   │   ├── fragment_budget_and_goal_dashboard.xml
+│   │   │   │   │   ├── fragment_categories.xml
+│   │   │   │   │   ├── fragment_category_create.xml
+│   │   │   │   │   ├── fragment_category_delete.xml
+│   │   │   │   │   ├── fragment_category_detail.xml
+│   │   │   │   │   ├── fragment_category_detail_budget.xml
+│   │   │   │   │   ├── fragment_category_edit.xml
+│   │   │   │   │   ├── fragment_category_report.xml
+│   │   │   │   │   ├── fragment_education_center.xml
+│   │   │   │   │   ├── fragment_expenses.xml
+│   │   │   │   │   ├── fragment_expense_create.xml
+│   │   │   │   │   ├── fragment_expense_delete.xml
+│   │   │   │   │   ├── fragment_expense_detail.xml
+│   │   │   │   │   ├── fragment_expense_edit.xml
+│   │   │   │   │   ├── fragment_goal_setup.xml
+│   │   │   │   │   ├── fragment_help_support.xml
+│   │   │   │   │   ├── fragment_income_expenses.xml
+│   │   │   │   │   ├── fragment_landing.xml
+│   │   │   │   │   ├── fragment_report_dashboard.xml
+│   │   │   │   │   ├── fragment_settings.xml
+│   │   │   │   │   ├── item_category.xml
+│   │   │   │   │   ├── item_category_with_limit.xml
+│   │   │   │   │   ├── item_expense.xml
+│   │   │   │   │   ├── item_user.xml
+│   │   │   │   ├── menu/
+│   │   │   │   ├── values/
+│   │   │   │   ├── xml/
+│   │   ├── test/java/vcmsa/projects/poe_prog7313/
+│   ├── build.gradle.kts
+│── gradle/
+│── gradle.properties
+│── gradlew
+│── gradlew.bat
+│── settings.gradle.kts
+│── README.md

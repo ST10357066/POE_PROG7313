@@ -11,12 +11,12 @@
         android:orientation="vertical"
         android:background="#E8F5E9">
 
+        <!-- Header Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Header -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
                 android:padding="12dp"
                 android:background="#0F483D" />
 
-            <!-- Tabs -->
+            <!-- Tabs (for navigation context, only 'Create' is active here) -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -97,6 +97,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="20dp" />
 
+                <!-- Amount Field -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -113,6 +114,7 @@
                     android:inputType="numberDecimal"
                     android:hint="Amount" />
 
+                <!-- Date Field -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -129,6 +131,7 @@
                     android:inputType="date"
                     android:hint="Expense Date" />
 
+                <!-- Description Field -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -144,6 +147,7 @@
                     android:layout_marginBottom="12dp"
                     android:hint="Description" />
 
+                <!-- Category Field -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -158,6 +162,7 @@
                     android:padding="12dp"
                     android:layout_marginBottom="12dp" />
 
+                <!-- Photo Upload Button -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -172,6 +177,7 @@
                     android:backgroundTint="#DDDDDD"
                     android:layout_marginBottom="20dp" />
 
+                <!-- Create Button -->
                 <Button
                     android:id="@+id/buttonCreateExpense"
                     android:layout_width="wrap_content"
@@ -182,8 +188,5 @@
                     android:text="Create" />
             </LinearLayout>
         </ScrollView>
-
-
     </LinearLayout>
-
 </FrameLayout>

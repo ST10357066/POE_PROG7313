@@ -136,56 +136,16 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <!-- Budget Overview List -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Budget Overview"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:layout_marginBottom="8dp"/>
+                <!-- Dummy Budget Items -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Utilities: $120 / $200" android:textSize="16sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dining Out: $150 / $300" android:textSize="16sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Transport: $80 / $150" android:textSize="16sp"/>
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerBudgetOverview"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <!-- Goal Tracker List -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Goal Tracker"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp"/>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerGoalTracker"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
+                <!-- Dummy Goals -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="New Car: $1000 / $20000" android:textSize="16sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Home Renovation: $500 / $10000" android:textSize="16sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retirement Fund: $3000 / $100000" android:textSize="16sp"/>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
-
-        <!-- Floating Action Button -->
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabAddIncome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="16dp"
-            android:contentDescription="Add Income"
-            app:srcCompat="@drawable/ic_add"/>
-
-        <!-- Bottom Navigation -->
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            app:menu="@menu/bottom_nav_menu_budget_goal"/>
-
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
 </FrameLayout>
