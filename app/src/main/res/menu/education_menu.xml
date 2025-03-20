@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/education"
+        android:title="Learn"
+        android:icon="@drawable/ic_advices"
+        />
+    <item
+        android:id="@+id/assist"
+        android:title="Assitance"
+        android:icon="@drawable/ic_assistance"
+        />
+</menu>

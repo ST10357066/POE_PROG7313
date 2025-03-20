@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutIncomeExpenses"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/layoutIncomeExpenses"
     android:background="#E8F5E9"
     tools:context=".Feature2AdvancedReportingandAnalytics.IncomeExpensesFragment">
 
-
-    <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp"
-        >
+        android:padding="16dp">
 
         <!-- Filter / Date Range Selector -->
         <LinearLayout
@@ -32,6 +29,8 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:hint="Select Date Range"
+                android:background="@android:color/white"
+                android:padding="8dp"
                 android:inputType="date"/>
 
             <Button
@@ -39,17 +38,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Apply"
+                android:backgroundTint="#4CAF50"
+                android:textColor="@android:color/white"
                 android:layout_marginStart="8dp"/>
         </LinearLayout>
 
-        <!-- Bar Graph for Income vs. Expenses -->
+        <!-- Bar Graph for Income vs. Expenses Placeholder -->
         <FrameLayout
             android:id="@+id/barGraphContainer"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="@android:color/darker_gray"
+            android:background="#BDBDBD"
             android:layout_marginBottom="16dp">
-            <!-- Insert BarGraph view (e.g., MPAndroidChart BarChart) -->
+            <!-- Dummy text to indicate bar graph area -->
+            <!-- Dummy Chart Image -->
+            <ImageView
+                android:id="@+id/imageReportChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/textReportHeader"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/dummy_bar_chart"
+                android:scaleType="centerCrop"
+                android:contentDescription="Dummy Chart"
+                android:elevation="4dp"
+                android:background="@android:color/white"/>
+
         </FrameLayout>
 
         <!-- Savings Rate Indicator -->
@@ -60,7 +74,7 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:padding="8dp"
-            android:background="#807A7A"
+            android:background="#607D8B"
             android:layout_marginBottom="16dp">
 
             <TextView
@@ -69,7 +83,8 @@
                 android:layout_height="wrap_content"
                 android:text="Savings Rate:"
                 android:textStyle="bold"
-                android:textSize="16sp"/>
+                android:textSize="16sp"
+                android:textColor="@android:color/white"/>
 
             <TextView
                 android:id="@+id/textSavingsRateValue"
@@ -77,6 +92,7 @@
                 android:layout_height="wrap_content"
                 android:text="20%"
                 android:textSize="16sp"
+                android:textColor="@android:color/white"
                 android:layout_marginStart="8dp"/>
         </LinearLayout>
 
@@ -85,7 +101,8 @@
             android:id="@+id/buttonDownloadReport"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Download Report as PDF"/>
+            android:text="Download Report as PDF"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@android:color/white"/>
     </LinearLayout>
-
 </FrameLayout>

@@ -26,7 +26,7 @@
             android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="take_control_of_your_finances_with_budget_genius"
+            android:text="take control of your finances with budget genius"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="24sp"

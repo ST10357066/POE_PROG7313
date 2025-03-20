@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E8F5E9"
@@ -9,8 +10,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <!-- Top Filter Panel -->
         <LinearLayout
@@ -20,19 +20,26 @@
             android:padding="16dp"
             android:orientation="horizontal"
             android:gravity="center_vertical">
+
             <EditText
                 android:id="@+id/editDateRange"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:hint="Select Date Range"
-                android:inputType="date"/>
+                android:background="@android:color/white"
+                android:padding="12dp"
+                android:inputType="date"
+                android:elevation="2dp"/>
+
             <ImageButton
                 android:id="@+id/buttonApplyFilter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_filter_list"
-                android:contentDescription="Apply Filters"/>
+                android:src="@drawable/ic_filter"
+                android:contentDescription="Apply Filters"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginStart="8dp"/>
         </LinearLayout>
 
         <!-- Tab Layout for Different Reports -->
@@ -42,37 +49,160 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/layoutFilters"
             app:tabMode="fixed"
-            app:tabGravity="fill">
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabSpending"
-                android:text="Spending Trends"/>
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabCategory"
-                android:text="Category Analysis"/>
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabIncome"
-                android:text="Income vs Expenses"/>
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabAgeOfMoney"
-                android:text="Age of Money"/>
-        </com.google.android.material.tabs.TabLayout>
+            app:tabGravity="fill"
+            app:tabIndicatorColor="#4CAF50"
+            app:tabSelectedTextColor="#4CAF50"
+            app:tabTextColor="#757575"/>
 
-        <!-- Report Display Area -->
-        <FrameLayout
+        <!-- Report Display Area (changed to RelativeLayout) -->
+        <RelativeLayout
             android:id="@+id/reportContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/tabReports"
-            android:layout_above="@+id/bottomNavigation"/>
+            android:layout_above="@id/bottomNavigationReports">
 
-        <!-- Bottom Navigation Bar (if needed) -->
+            <!-- Dummy Report Header -->
+            <TextView
+                android:id="@+id/textReportHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monthly Financial Report"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#424242"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"/>
+
+            <!-- Dummy Chart Image -->
+            <ImageView
+                android:id="@+id/imageReportChart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/textReportHeader"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/dummy_chart"
+                android:scaleType="centerCrop"
+                android:contentDescription="Dummy Chart"
+                android:elevation="4dp"
+                android:background="@android:color/white"/>
+
+            <!-- Dummy Report List -->
+            <LinearLayout
+                android:id="@+id/layoutReportList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/imageReportChart"
+                android:layout_marginTop="24dp"
+                android:padding="16dp">
+
+                <!-- Report Item 1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Report Item 1: Expense Breakdown"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#212121"
+                            android:paddingBottom="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Detailed analysis of expenses across various categories including food, utilities, and entertainment."
+                            android:textSize="14sp"
+                            android:textColor="#616161"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Report Item 2 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Report Item 2: Income Sources"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#212121"
+                            android:paddingBottom="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Breakdown of income streams, highlighting primary salary and additional earnings from freelance work."
+                            android:textSize="14sp"
+                            android:textColor="#616161"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Report Item 3 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Report Item 3: Savings and Investments"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#212121"
+                            android:paddingBottom="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Overview of savings trends and a comparison of various investment performance metrics for the current period."
+                            android:textSize="14sp"
+                            android:textColor="#616161"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Bottom Navigation Bar -->
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationReports"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            app:menu="@menu/bottom_nav_menu_reports"/>
+            app:menu="@menu/bottom_nav_menu_reports"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            android:background="#4CAF50"/>
     </RelativeLayout>
-
-
 </FrameLayout>

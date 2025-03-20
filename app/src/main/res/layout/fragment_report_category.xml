@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutCategoryReport"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/layoutCategoryReport"
     android:background="#E8F5E9"
     tools:context=".Feature2AdvancedReportingandAnalytics.CategoryReportFragment">
 
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -29,24 +29,40 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:hint="Select Date Range"
-                android:inputType="date"/>
+                android:background="@android:color/white"
+                android:padding="8dp"
+                android:inputType="date" />
 
             <Button
                 android:id="@+id/buttonCompare"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Compare"
+                android:backgroundTint="#4CAF50"
+                android:textColor="@android:color/white"
                 android:layout_marginStart="8dp"/>
         </LinearLayout>
 
-        <!-- Spending Trend Line Chart -->
+        <!-- Spending Trend Line Chart Placeholder -->
         <FrameLayout
             android:id="@+id/chartContainer"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="@android:color/darker_gray"
+            android:background="#BDBDBD"
             android:layout_marginBottom="16dp">
-            <!-- Replace with a LineChart view (e.g., MPAndroidChart) -->
+            <!-- Dummy Chart Image -->
+            <ImageView
+                android:id="@+id/imageReportChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/textReportHeader"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/dummy_chart"
+                android:scaleType="centerCrop"
+                android:contentDescription="Dummy Chart"
+                android:elevation="4dp"
+                android:background="@android:color/white"/>
+
         </FrameLayout>
 
         <!-- Transaction List Header -->
@@ -54,18 +70,21 @@
             android:id="@+id/textTransactionHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Transactions"
+            android:layout_marginBottom="8dp"
+            android:text="Recent Expense"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
+            android:textStyle="bold" />
 
         <!-- RecyclerView for Transactions -->
+        <!-- For rapid prototyping, you might later replace this with a dynamic list -->
+        <!-- RecyclerView for listing expenses -->
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerTransactionsReport"
+            android:id="@+id/rvExpenses"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:padding="16dp"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_expense" />
     </LinearLayout>
-
-
 </FrameLayout>

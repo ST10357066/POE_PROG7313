@@ -35,7 +35,7 @@ class CategoryDetailBudgetFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_category_detail_budget, container, false)
+        return inflater.inflate(R.layout.fragment_report_age_of_money, container, false)
     }
 
     companion object {
